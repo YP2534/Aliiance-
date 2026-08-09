@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Alliance Relocation Packers And Movers</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: {
+                        brand: '#2563eb', // Blue
+                        brandDark: '#1e40af',
+                        accent: '#f59e0b', // Amber/Yellow
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth interactions */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .icon-wrapper {
+            transition: all 0.4s ease;
+        }
+        .service-card:hover .icon-wrapper {
+            background-color: #2563eb; /* brand */
+            color: white;
+            transform: scale(1.1) rotate(5deg);
+        }
+        .service-link {
+            transition: padding 0.3s ease;
+        }
+        .service-card:hover .service-link {
+            padding-left: 0.5rem;
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Services Header Section -->
+    <section class="relative bg-gray-900 py-24 text-center">
+        <!-- Subtle background pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#f59e0b 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="relative max-w-4xl mx-auto px-4 z-10">
+            <span class="text-accent font-bold tracking-wider uppercase text-sm mb-2 block">What We Do</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Premium Relocation Solutions</h1>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                We offer domestic door-to-door delivery services designed to simplify logistics, reduce costs, and guarantee the absolute safety of your belongings across India.
+            </p>
+        </div>
+    </section>
+
+    <!-- Detailed Services Grid -->
+    <section class="py-20 bg-gray-50 -mt-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: House & Office Shifting -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">House & Office Shifting</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Safe and hassle-free household and corporate relocation. Move your business or residence to a new place with complete peace of mind and minimum downtime.
+                        </p>
+                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
+                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Packing & Unpacking -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Packing & Unpacking</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Excellent packing services utilizing top-quality, premium materials to minimize stress levels and eliminate the chance of any kind of damage during transit.
+                        </p>
+                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
+                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Loading & Unloading -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                            <i class="fas fa-people-carry"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Loading & Unloading</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Highly experienced professionals carefully load and unload your belongings using modern equipment, ensuring zero scratches and secure placement.
+                        </p>
+                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
+                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Car & Bike Transportation -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Vehicle Transportation</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Door-to-door car and bike shifting services using both enclosed and open vehicle carriers. Handled by experts well-versed in automotive logistics.
+                        </p>
+                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
+                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Warehousing & Storage -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Warehousing Services</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Client-specific warehouse storage solutions. We manage and operate customized, secure storage spaces for both your short-term and long-term requirements.
+                        </p>
+                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
+                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Transit Insurance -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Insurance Services</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Comprehensive coverage against unforeseen circumstances like fire, accidents, or sabotage beyond our control. A must-have while sending household goods.
+                        </p>
+                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
+                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="bg-brand py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Ready to make your move?</h2>
+            <p class="text-blue-100 mb-8 text-lg">Join thousands of satisfied customers across our 34+ city PAN-India network. Get up to ₹500 cashback on your booking today!</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+919028387199" class="bg-accent text-gray-900 font-bold px-8 py-4 rounded-full hover:bg-yellow-500 transition shadow-lg flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i> Call: +91 9028387199
+                </a>
+                <a href="https://wa.me/919028387199" target="_blank" class="bg-white text-brand font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition shadow-lg flex items-center justify-center">
+                    <i class="fab fa-whatsapp text-green-500 mr-2 text-xl"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
