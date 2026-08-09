@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Alliance Relocation Packers And Movers</title>
+    <title>Our Services - Alliance Relocation Packers And Movers</title>
     
-    <!-- Tailwind CSS -->
+    <!-- Instagram Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='%23E1306C' d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z'/></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
@@ -17,161 +16,157 @@
             theme: {
                 extend: {
                     fontFamily: { sans: ['Poppins', 'sans-serif'] },
-                    colors: {
-                        brand: '#2563eb', // Blue
-                        brandDark: '#1e40af',
-                        accent: '#f59e0b', // Amber/Yellow
-                    }
+                    colors: { brand: '#2563eb', accent: '#f59e0b', whatsapp: '#25D366', instagram: '#E1306C' }
                 }
             }
         }
     </script>
     <style>
-        /* Smooth interactions */
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        html { scroll-behavior: smooth; }
+        .pulse-whatsapp { animation: pulse-green 2s infinite; }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        .hover-instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white !important; border-color: transparent;
         }
-        .icon-wrapper {
-            transition: all 0.4s ease;
-        }
-        .service-card:hover .icon-wrapper {
-            background-color: #2563eb; /* brand */
-            color: white;
-            transform: scale(1.1) rotate(5deg);
-        }
-        .service-link {
-            transition: padding 0.3s ease;
-        }
-        .service-card:hover .service-link {
-            padding-left: 0.5rem;
-            color: #2563eb;
-        }
+        .service-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .icon-wrapper { transition: all 0.4s ease; }
+        .service-card:hover .icon-wrapper { background-color: #2563eb; color: white; transform: scale(1.1) rotate(5deg); }
+        .service-link { transition: padding 0.3s ease; }
+        .service-card:hover .service-link { padding-left: 0.5rem; color: #2563eb; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="bg-gray-50 text-gray-800 antialiased relative">
+
+    <a href="https://wa.me/919028387199?text=Hello!%20I%20would%20like%20to%20get%20a%20quote%20for%20packing%20and%20moving%20services." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-whatsapp text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50 pulse-whatsapp hover:scale-110 transition duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-gray-200 text-sm py-2 px-4 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex space-x-6 items-center">
+                <a href="tel:09028387199" class="hover:text-accent"><i class="fas fa-phone text-accent mr-2"></i> +91 9028387199</a>
+                <a href="https://wa.me/919028387199" target="_blank" class="hover:text-whatsapp"><i class="fab fa-whatsapp text-whatsapp mr-2"></i> WhatsApp Us</a>
+                <a href="https://www.instagram.com/alliance_relocation_packers_an/?hl=en" target="_blank" class="hover:text-instagram transition"><i class="fab fa-instagram text-instagram mr-2"></i> Instagram</a>
+                <span><i class="fas fa-envelope text-accent mr-2"></i> info@alliancepacker.in</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span><i class="fas fa-file-invoice text-accent mr-1"></i> GSTIN: 27MPSPS0987K1ZJ</span>
+                <span class="text-accent font-semibold ml-4">Offer: Cashback up to INR 500!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-brand flex items-center">
+                <i class="fas fa-truck-moving text-accent text-3xl mr-3"></i>
+                <div>
+                    <div class="leading-tight">Alliance Relocation</div>
+                    <div class="text-xs text-gray-500 font-normal tracking-wider">PACKERS AND MOVERS</div>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <!-- Point back to home page -->
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <a href="index.html#about" class="hover:text-brand transition">About Us</a>
+                <a href="services.html" class="text-brand font-bold transition">Services</a>
+                <a href="index.html#why-us" class="hover:text-brand transition">Why Us</a>
+                <a href="index.html#testimonials" class="hover:text-brand transition">Testimonials</a>
+                <a href="https://wa.me/919028387199?text=Hello!%20I%20want%20a%20free%20quote." target="_blank" class="bg-whatsapp text-white px-5 py-2 rounded-full hover:bg-green-600 transition shadow-lg flex items-center">
+                    <i class="fab fa-whatsapp text-xl mr-2"></i> Get Quote
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Services Header Section -->
-    <section class="relative bg-gray-900 py-24 text-center">
-        <!-- Subtle background pattern -->
+    <section class="relative bg-gray-900 py-24 text-center border-t border-gray-800">
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#f59e0b 1px, transparent 1px); background-size: 30px 30px;"></div>
-        
         <div class="relative max-w-4xl mx-auto px-4 z-10">
             <span class="text-accent font-bold tracking-wider uppercase text-sm mb-2 block">What We Do</span>
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Premium Relocation Solutions</h1>
-            <p class="text-lg text-gray-300 leading-relaxed">
+            <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 We offer domestic door-to-door delivery services designed to simplify logistics, reduce costs, and guarantee the absolute safety of your belongings across India.
             </p>
         </div>
     </section>
 
     <!-- Detailed Services Grid -->
-    <section class="py-20 bg-gray-50 -mt-10">
+    <section class="py-20 bg-gray-50 -mt-10 relative z-20">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Service 1: House & Office Shifting -->
+                <!-- Service 1 -->
                 <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
                     <div class="relative z-10">
-                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
-                            <i class="fas fa-home"></i>
-                        </div>
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-home"></i></div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">House & Office Shifting</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Safe and hassle-free household and corporate relocation. Move your business or residence to a new place with complete peace of mind and minimum downtime.
-                        </p>
-                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
-                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Safe and hassle-free household and corporate relocation. Move your business or residence to a new place with complete peace of mind.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
                     </div>
                 </div>
 
-                <!-- Service 2: Packing & Unpacking -->
+                <!-- Service 2 -->
                 <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
                     <div class="relative z-10">
-                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
-                            <i class="fas fa-box-open"></i>
-                        </div>
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-box-open"></i></div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Packing & Unpacking</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Excellent packing services utilizing top-quality, premium materials to minimize stress levels and eliminate the chance of any kind of damage during transit.
-                        </p>
-                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
-                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Excellent packing services utilizing top-quality, premium materials to minimize stress levels and eliminate the chance of damage.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
                     </div>
                 </div>
 
-                <!-- Service 3: Loading & Unloading -->
+                <!-- Service 3 -->
                 <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
                     <div class="relative z-10">
-                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
-                            <i class="fas fa-people-carry"></i>
-                        </div>
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-people-carry"></i></div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Loading & Unloading</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Highly experienced professionals carefully load and unload your belongings using modern equipment, ensuring zero scratches and secure placement.
-                        </p>
-                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
-                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Highly experienced professionals carefully load and unload your belongings using modern equipment, ensuring secure placement.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
                     </div>
                 </div>
 
-                <!-- Service 4: Car & Bike Transportation -->
+                <!-- Service 4 -->
                 <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
                     <div class="relative z-10">
-                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
-                            <i class="fas fa-car-side"></i>
-                        </div>
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-car-side"></i></div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Vehicle Transportation</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Door-to-door car and bike shifting services using both enclosed and open vehicle carriers. Handled by experts well-versed in automotive logistics.
-                        </p>
-                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
-                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Door-to-door car and bike shifting services using both enclosed and open vehicle carriers handled by automotive logistics experts.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
                     </div>
                 </div>
 
-                <!-- Service 5: Warehousing & Storage -->
+                <!-- Service 5 -->
                 <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
                     <div class="relative z-10">
-                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
-                            <i class="fas fa-warehouse"></i>
-                        </div>
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-warehouse"></i></div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Warehousing Services</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Client-specific warehouse storage solutions. We manage and operate customized, secure storage spaces for both your short-term and long-term requirements.
-                        </p>
-                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
-                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Client-specific warehouse storage solutions. We manage and operate customized spaces for your short and long-term requirements.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
                     </div>
                 </div>
 
-                <!-- Service 6: Transit Insurance -->
+                <!-- Service 6 -->
                 <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
                     <div class="relative z-10">
-                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-shield-alt"></i></div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Insurance Services</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Comprehensive coverage against unforeseen circumstances like fire, accidents, or sabotage beyond our control. A must-have while sending household goods.
-                        </p>
-                        <a href="#" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">
-                            Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive coverage against unforeseen circumstances like fire or accidents. A must-have while sending your household goods.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
                     </div>
                 </div>
 
@@ -195,5 +190,52 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+                    <i class="fas fa-truck-moving text-accent text-3xl mr-3"></i>
+                    <div class="leading-tight">Alliance Relocation</div>
+                </a>
+                <p class="text-sm text-gray-400 mb-6">One of the most reliable names in the Packers and Movers business. We are an ISO certified company with great experience and a vast PAN India network.</p>
+                <div class="flex space-x-3">
+                    <a href="https://wa.me/919028387199" target="_blank" class="w-10 h-10 bg-whatsapp rounded-full flex items-center justify-center text-white hover:opacity-80 transition"><i class="fab fa-whatsapp text-lg"></i></a>
+                    <a href="https://www.instagram.com/alliance_relocation_packers_an/?hl=en" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover-instagram transition duration-300"><i class="fab fa-instagram text-lg"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                    <li><a href="index.html#about" class="hover:text-accent transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-accent transition">Our Services</a></li>
+                    <li><a href="index.html#why-us" class="hover:text-accent transition">Why Choose Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-white mb-6">Contact Us</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-accent mt-1 mr-3 w-5"></i>
+                        <span>Nbh 43, New Balaji Nagar,<br>Aurangabad, Maharashtra<br>India - 431007</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone text-accent mr-3 w-5"></i>
+                        <a href="tel:09028387199" class="hover:text-white">+91 9028387199</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope text-accent mr-3 w-5"></i>
+                        <a href="mailto:info@alliancepacker.in" class="hover:text-white">info@alliancepacker.in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+            &copy; 2026 Alliance Relocation Packers And Movers. All Rights Reserved.
+        </div>
+    </footer>
 </body>
 </html>
