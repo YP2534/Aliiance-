@@ -27,32 +27,59 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
+        
+        /* WhatsApp Pulse Animation */
         .pulse-whatsapp { animation: pulse-green 2s infinite; }
         @keyframes pulse-green {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
+        
+        /* Instagram Gradient Hover */
         .hover-instagram:hover {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white !important; border-color: transparent;
+            color: white !important;
+            border-color: transparent;
         }
-        .dropdown-menu { transform: translateY(10px); opacity: 0; visibility: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .group:hover .dropdown-menu { transform: translateY(0); opacity: 1; visibility: visible; }
+
+        /* Desktop Dropdown Animation */
+        .dropdown-menu {
+            transform: translateY(10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .group:hover .dropdown-menu {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Services Grid Animations */
         .service-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
         .icon-wrapper { transition: all 0.4s ease; }
         .service-card:hover .icon-wrapper { background-color: #2563eb; color: white; transform: scale(1.1) rotate(5deg); }
         .service-link { transition: padding 0.3s ease; }
         .service-card:hover .service-link { padding-left: 0.5rem; color: #2563eb; }
+
+        /* Hamburger Icon Animations */
         #menu-icon-bars, #menu-icon-close { transition: all 0.3s ease; }
+        
+        /* Client Logo Hover effect */
         .client-logo-card { transition: all 0.3s ease; }
         .client-logo-card:hover { border-color: #cbd5e1; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transform: scale(1.02); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased relative">
 
-    <a href="https://wa.me/919028387199?text=Hello!%20I%20would%20like%20to%20get%20a%20quote%20for%20packing%20and%20moving%20services." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-whatsapp text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50 pulse-whatsapp hover:scale-110 transition duration-300">
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/919028387199?text=Hello!%20I%20would%20like%20to%20get%20a%20quote%20for%20packing%20and%20moving%20services." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 bg-whatsapp text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50 pulse-whatsapp hover:scale-110 transition duration-300"
+       title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -75,7 +102,8 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50 relative">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center bg-white relative z-50">
-            <a href="index.html" class="text-2xl font-bold text-brand flex items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-brand flex items-center">
                 <i class="fas fa-truck-moving text-accent text-3xl mr-3"></i>
                 <div>
                     <div class="leading-tight">Alliance Relocation</div>
@@ -85,13 +113,15 @@
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center font-medium">
-                <a href="index.html" class="text-brand font-bold transition">Home</a>
+                <a href="index.html" class="hover:text-brand transition">Home</a>
                 <a href="#about" class="hover:text-brand transition">About Us</a>
                 
+                <!-- Services Dropdown -->
                 <div class="relative group py-4">
                     <a href="services.html" class="hover:text-brand transition flex items-center cursor-pointer">
                         Services <i class="fas fa-chevron-down text-[10px] ml-1.5 mt-0.5 text-gray-400 group-hover:text-brand"></i>
                     </a>
+                    
                     <div class="dropdown-menu absolute left-0 top-full mt-[-10px] w-64 bg-white border border-gray-100 rounded-xl shadow-xl z-50 overflow-hidden">
                         <ul class="py-2">
                             <li><a href="services.html" class="block px-5 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand transition-colors"><i class="fas fa-home w-5 text-gray-400 mr-1"></i> Home & Office Shifting</a></li>
@@ -112,17 +142,21 @@
                 </a>
             </div>
 
-            <!-- Hamburger Button -->
+            <!-- Hamburger Button (Mobile Only) -->
             <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-gray-800 hover:text-brand hover:bg-blue-50 focus:outline-none transition-colors">
-                <svg id="menu-icon-bars" class="w-7 h-7 block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <svg id="menu-icon-bars" class="w-7 h-7 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
             </button>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 transition-all duration-300 ease-in-out opacity-0 invisible -translate-y-2 pointer-events-none z-40">
             <div class="px-4 py-6 space-y-3 flex flex-col">
-                <a href="index.html" class="mobile-link block px-4 py-3 text-base font-semibold text-brand bg-blue-50 rounded-xl transition"><i class="fas fa-home w-6 text-brand"></i> Home</a>
+                <a href="index.html" class="mobile-link block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-home w-6 text-brand"></i> Home</a>
                 <a href="#about" class="mobile-link block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-info-circle w-6 text-brand"></i> About Us</a>
                 <a href="services.html" class="mobile-link block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-box-open w-6 text-brand"></i> Our Services</a>
                 <a href="branches.html" class="mobile-link block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-map-marked-alt w-6 text-brand"></i> Branches</a>
@@ -130,7 +164,13 @@
                 <a href="#testimonials" class="mobile-link block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-comment-dots w-6 text-brand"></i> Testimonials</a>
                 
                 <div class="border-t border-gray-100 my-4"></div>
-                <a href="https://wa.me/919028387199" target="_blank" class="block px-4 py-4 text-center text-base font-bold bg-whatsapp text-white rounded-xl shadow-md hover:bg-green-600 transition"><i class="fab fa-whatsapp text-xl mr-2"></i> Get Free Quote</a>
+                
+                <a href="https://wa.me/919028387199" target="_blank" class="block px-4 py-4 text-center text-base font-bold bg-whatsapp text-white rounded-xl shadow-md hover:bg-green-600 transition">
+                    <i class="fab fa-whatsapp text-xl mr-2"></i> Get Free Quote
+                </a>
+                <a href="tel:09028387199" class="block px-4 py-3 text-center text-base font-bold bg-gray-100 text-gray-800 rounded-xl hover:bg-gray-200 transition">
+                    <i class="fas fa-phone mr-2"></i> Call: +91 9028387199
+                </a>
             </div>
         </div>
     </nav>
@@ -150,151 +190,309 @@
                     <a href="tel:09028387199" class="bg-accent text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-500 transition shadow-lg flex items-center">
                         <i class="fas fa-phone mr-2"></i> Call Now: +91 9028387199
                     </a>
-                    <a href="https://wa.me/919028387199" target="_blank" class="bg-whatsapp text-white font-bold px-8 py-3 rounded-full hover:bg-green-600 transition shadow-lg flex items-center">
+                    <a href="https://wa.me/919028387199?text=Hello!%20I%20want%20to%20enquire%20about%20your%20moving%20services." target="_blank" class="bg-whatsapp text-white font-bold px-8 py-3 rounded-full hover:bg-green-600 transition shadow-lg flex items-center">
                         <i class="fab fa-whatsapp mr-2 text-xl"></i> Chat on WhatsApp
                     </a>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-4 text-sm font-medium">
+                    <span class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i> Online Tracking</span>
+                    <span class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i> PAN India Network</span>
+                    <span class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i> Cashless Payments</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Stats Section -->
-    <section class="py-12 bg-gray-900 text-white" id="about">
+    <!-- Stats Section (RESTORED TO ORIGINAL) -->
+    <section class="py-12 bg-white border-b border-gray-200" id="about">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-                <div class="text-4xl font-bold mb-2"><span class="counter" data-target="6423">0</span></div>
-                <div class="text-accent font-medium">Project Handover</div>
+                <div class="text-4xl font-bold text-brand mb-2"><span class="counter" data-target="11" data-suffix="+">0</span></div>
+                <div class="text-gray-500 font-medium">Years Experience</div>
             </div>
             <div>
-                <div class="text-4xl font-bold mb-2"><span class="counter" data-target="6326">0</span></div>
-                <div class="text-accent font-medium">Project Done</div>
+                <div class="text-4xl font-bold text-brand mb-2"><span class="counter" data-target="2569" data-suffix="">0</span></div>
+                <div class="text-gray-500 font-medium">Projects Handover</div>
             </div>
             <div>
-                <div class="text-4xl font-bold mb-2"><span class="counter" data-target="5000">0</span></div>
-                <div class="text-accent font-medium">Million Revenue</div>
+                <div class="text-4xl font-bold text-brand mb-2"><span class="counter" data-target="2530" data-suffix="+">0</span></div>
+                <div class="text-gray-500 font-medium">Projects Done</div>
             </div>
             <div>
-                <div class="text-4xl font-bold mb-2"><span class="counter" data-target="85">0</span></div>
-                <div class="text-accent font-medium">Cities Experience</div>
+                <div class="text-4xl font-bold text-brand mb-2"><span class="counter" data-target="34" data-suffix="">0</span></div>
+                <div class="text-gray-500 font-medium">Cities Covered</div>
             </div>
         </div>
     </section>
 
     <!-- Detailed Services Header & Grid -->
-    <section id="services-section" class="relative bg-gray-100 py-20 text-center border-b border-gray-200">
+    <section id="services-section" class="relative bg-gray-900 py-20 text-center border-t border-gray-800 scroll-mt-24">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#f59e0b 1px, transparent 1px); background-size: 30px 30px;"></div>
         <div class="relative max-w-4xl mx-auto px-4 z-10">
-            <span class="text-brand font-bold tracking-wider uppercase text-sm mb-2 block">What We Do</span>
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Premium Relocation Solutions</h2>
-            <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            <span class="text-accent font-bold tracking-wider uppercase text-sm mb-2 block">What We Do</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Premium Relocation Solutions</h2>
+            <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 We offer domestic door-to-door delivery services designed to simplify logistics, reduce costs, and guarantee the absolute safety of your belongings across India.
             </p>
         </div>
     </section>
 
     <section class="py-20 bg-gray-50 -mt-10 relative z-20">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
-                <div class="relative z-10">
-                    <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-home"></i></div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">House & Office Shifting</h3>
-                    <p class="text-gray-600 mb-6">Safe and hassle-free household and corporate relocation. Move your business or residence to a new place with complete peace of mind.</p>
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-home"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">House & Office Shifting</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Safe and hassle-free household and corporate relocation. Move your business or residence to a new place with complete peace of mind.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-box-open"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Packing & Unpacking</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Excellent packing services utilizing top-quality, premium materials to minimize stress levels and eliminate the chance of damage.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-people-carry"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Loading & Unloading</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Highly experienced professionals carefully load and unload your belongings using modern equipment, ensuring secure placement.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-car-side"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Vehicle Transportation</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Door-to-door car and bike shifting services using both enclosed and open vehicle carriers handled by automotive logistics experts.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-warehouse"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Warehousing Services</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Client-specific warehouse storage solutions. We manage and operate customized spaces for your short and long-term requirements.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 opacity-50 z-0 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Insurance Services</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive coverage against unforeseen circumstances like fire or accidents. A must-have while sending your household goods.</p>
+                        <a href="https://wa.me/919028387199" target="_blank" class="service-link font-semibold text-gray-900 flex items-center group-hover:text-brand">Get Quotation <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
-                <div class="relative z-10">
-                    <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-box-open"></i></div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Packing & Unpacking</h3>
-                    <p class="text-gray-600 mb-6">Excellent packing services utilizing top-quality, premium materials to minimize stress levels and eliminate the chance of damage.</p>
-                </div>
-            </div>
-            <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden group">
-                <div class="relative z-10">
-                    <div class="icon-wrapper w-16 h-16 bg-blue-100 text-brand rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm"><i class="fas fa-people-carry"></i></div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Loading & Unloading</h3>
-                    <p class="text-gray-600 mb-6">Highly experienced professionals carefully load and unload your belongings using modern equipment, ensuring secure placement.</p>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-10">
-            <a href="services.html" class="bg-brand text-white px-8 py-3 rounded-full hover:bg-blue-700 transition font-bold shadow-lg inline-block">View All Services</a>
         </div>
     </section>
 
-    <!-- Why Choose Us & Happy Clients Block -->
+    <!-- Why Choose Us (RESTORED TO ORIGINAL) -->
     <section id="why-us" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-12">
-            <div class="lg:w-1/2">
-                <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-accent pb-2 inline-block">Why Work With Us?</h2>
-                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
-                    <div class="bg-white px-5 py-4 flex justify-between items-center cursor-pointer border-b border-gray-200">
-                        <h4 class="font-bold text-accent">11 Years of Experience</h4>
-                        <div class="bg-accent text-white w-6 h-6 flex items-center justify-center rounded"><i class="fas fa-chevron-up text-sm"></i></div>
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Movers packaging" class="rounded-2xl shadow-xl">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why We Are Better Than Others</h2>
+                <p class="text-gray-600 mb-8">Alliance Relocation Packers And Movers is a premier service provider in Aurangabad with an unwavering commitment to 100% customer satisfaction.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-brand mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Affordable Prices</h4>
+                            <p class="text-sm text-gray-600">Pricing structures tailored to fit your budget perfectly.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 px-5 py-6">
-                        <p class="text-sm text-gray-700">We have a large network across the country and also around the globe. Making a name in the market took a long time in this industry.</p>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-brand mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Safety First</h4>
+                            <p class="text-sm text-gray-600">Guaranteeing careful handling so your belongings arrive soundly.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-brand mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Reliable Manpower</h4>
+                            <p class="text-sm text-gray-600">Trustworthy, trained, and highly efficient transfer managers.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-brand mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900">24/7 Support</h4>
+                            <p class="text-sm text-gray-600">Enjoy a tension-free relocation with round-the-clock assistance.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="mb-4 border border-gray-200 rounded-lg bg-white px-5 py-4 flex justify-between items-center cursor-pointer"><h4 class="font-bold text-gray-800">Timely Delivery</h4><div class="bg-gray-700 text-white w-6 h-6 flex items-center justify-center rounded"><i class="fas fa-chevron-down text-sm"></i></div></div>
-                <div class="mb-4 border border-gray-200 rounded-lg bg-white px-5 py-4 flex justify-between items-center cursor-pointer"><h4 class="font-bold text-gray-800">24 X 7 Services</h4><div class="bg-gray-700 text-white w-6 h-6 flex items-center justify-center rounded"><i class="fas fa-chevron-down text-sm"></i></div></div>
             </div>
+        </div>
+    </section>
 
-            <div class="lg:w-1/2">
-                <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-accent pb-2 inline-block">Happy Clients</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex flex-col items-center justify-center"><span class="text-blue-700 font-bold text-lg uppercase flex items-center"><span class="text-blue-500 mr-1 text-xl">★</span> BLUE STAR</span><span class="text-blue-700 text-[9px] font-medium tracking-widest mt-1">BREATHE EASY</span></div>
-                    <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center"><span class="text-red-600 font-bold text-2xl italic tracking-tighter" style="font-family: serif;">Godrej</span></div>
-                    <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center"><div class="bg-red-600 text-white px-3 py-1 font-bold text-xl border-2 border-yellow-400">USHA</div></div>
-                    <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex flex-col items-center justify-center"><div class="bg-yellow-400 text-black px-2 py-0.5 font-black italic text-lg">UltraTech</div><span class="text-[10px] font-bold mt-1 uppercase">Cement</span></div>
-                    <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center"><span class="text-blue-700 font-black text-3xl">HCL</span></div>
-                    <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center"><span class="text-green-800 font-bold text-lg flex items-center"><span class="text-red-500 text-xl mr-1">❖</span> J&K Bank</span></div>
+    <!-- Happy Clients Section (ADDED AS NEW SECTION BELOW) -->
+    <section class="py-16 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Happy Clients</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mt-4 rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Client 1: Blue Star -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex flex-col items-center justify-center">
+                    <span class="text-blue-700 font-bold text-lg md:text-xl uppercase tracking-wider leading-none flex items-center"><span class="text-blue-500 mr-1 text-2xl">★</span> BLUE STAR</span>
+                    <span class="text-blue-700 text-[10px] md:text-xs font-medium tracking-widest mt-1">BREATHE EASY</span>
+                </div>
+                <!-- Client 2: Godrej -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <span class="text-red-600 font-bold text-3xl md:text-4xl italic tracking-tighter" style="font-family: serif;">Godrej</span>
+                </div>
+                <!-- Client 3: USHA -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <div class="bg-red-600 text-white px-4 py-1.5 font-bold text-xl md:text-2xl tracking-widest border-2 border-yellow-400">USHA</div>
+                </div>
+                <!-- Client 4: UltraTech Cement -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex flex-col items-center justify-center">
+                    <div class="bg-yellow-400 text-black px-3 py-1 font-black italic text-xl md:text-2xl leading-none">UltraTech</div>
+                    <span class="text-xs md:text-sm font-bold mt-1 uppercase">Cement</span>
+                </div>
+                <!-- Client 5: HCL -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <span class="text-blue-700 font-black text-4xl md:text-5xl tracking-tighter">HCL</span>
+                </div>
+                <!-- Client 6: J&K Bank -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <span class="text-green-800 font-bold text-xl md:text-2xl flex items-center leading-none"><span class="text-red-500 text-2xl md:text-3xl mr-2 font-normal">❖</span> J&K Bank</span>
+                </div>
+                <!-- Client 7: Airtel -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <span class="text-red-600 font-bold text-3xl md:text-4xl tracking-tighter lowercase flex items-center"><span class="text-red-600 font-black text-3xl md:text-4xl mr-1">O</span>airtel</span>
+                </div>
+                <!-- Client 8: IDBI Bank -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <div class="bg-teal-700 text-white px-3 py-1.5 font-bold text-base md:text-lg tracking-wider flex items-center"><span class="bg-orange-500 w-2.5 h-2.5 rounded-full mr-2"></span> IDBI BANK</div>
+                </div>
+                <!-- Client 9: DLF -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex flex-col items-center justify-center">
+                    <span class="text-black font-black text-4xl md:text-5xl leading-none">DLF</span>
+                    <span class="text-black font-semibold text-[9px] md:text-xs tracking-widest mt-1">BUILDING INDIA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-brand text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-800 p-8 rounded-2xl">
+                    <i class="fas fa-quote-left text-3xl text-accent mb-4 opacity-50"></i>
+                    <p class="mb-6 font-light">"Prompt, right from the survey of goods to packing, loading, unloading, moving and re-arranging. Done a very good job."</p>
+                    <div class="font-bold">- Mr. Rosan <span class="text-sm font-normal text-blue-200 block">Aurangabad</span></div>
+                </div>
+                <div class="bg-blue-800 p-8 rounded-2xl">
+                    <i class="fas fa-quote-left text-3xl text-accent mb-4 opacity-50"></i>
+                    <p class="mb-6 font-light">"The manpower is extremely efficient and they packed goods very professionally. Got all our goods without a single scratch."</p>
+                    <div class="font-bold">- Mr. Kelash Sharma <span class="text-sm font-normal text-blue-200 block">Mumbai</span></div>
+                </div>
+                <div class="bg-blue-800 p-8 rounded-2xl">
+                    <i class="fas fa-quote-left text-3xl text-accent mb-4 opacity-50"></i>
+                    <p class="mb-6 font-light">"There were no damages to the goods and I must commend the team for providing really good, timely service. Reasonable fares."</p>
+                    <div class="font-bold">- Mrs. Poonam Singh <span class="text-sm font-normal text-blue-200 block">Pune</span></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-16">
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-16">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-                <a href="#" class="text-2xl font-bold text-white flex items-center mb-6"><i class="fas fa-truck-moving text-accent text-3xl mr-3"></i><div>Alliance Relocation</div></a>
+                <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+                    <i class="fas fa-truck-moving text-accent text-3xl mr-3"></i>
+                    <div class="leading-tight">Alliance Relocation</div>
+                </a>
                 <p class="text-sm text-gray-400 mb-6">One of the most reliable names in the Packers and Movers business. We are an ISO certified company with great experience and a vast PAN India network.</p>
+                <div class="flex space-x-3">
+                    <a href="https://wa.me/919028387199" target="_blank" class="w-10 h-10 bg-whatsapp rounded-full flex items-center justify-center text-white hover:opacity-80 transition"><i class="fab fa-whatsapp text-lg"></i></a>
+                    <a href="https://www.instagram.com/alliance_relocation_packers_an/?hl=en" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover-instagram transition duration-300"><i class="fab fa-instagram text-lg"></i></a>
+                </div>
             </div>
+            
             <div>
                 <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
                 <ul class="space-y-3">
                     <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
-                    <li><a href="#about" class="hover:text-accent transition">About Us</a></li>
+                    <li><a href="index.html#about" class="hover:text-accent transition">About Us</a></li>
                     <li><a href="services.html" class="hover:text-accent transition">Our Services</a></li>
                     <li><a href="branches.html" class="hover:text-accent transition">Branches</a></li>
                 </ul>
             </div>
+
             <div>
                 <h3 class="text-xl font-bold text-white mb-6">Contact Us</h3>
                 <ul class="space-y-4">
-                    <li class="flex items-center"><i class="fas fa-phone text-accent mr-3 w-5"></i><a href="tel:09028387199" class="hover:text-white">+91 9028387199</a></li>
-                    <li class="flex items-center"><i class="fas fa-envelope text-accent mr-3 w-5"></i><a href="mailto:info@alliancepacker.in" class="hover:text-white">info@alliancepacker.in</a></li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-accent mt-1 mr-3 w-5"></i>
+                        <span>Nbh 43, New Balaji Nagar,<br>Aurangabad, Maharashtra<br>India - 431007</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone text-accent mr-3 w-5"></i>
+                        <a href="tel:09028387199" class="hover:text-white">+91 9028387199</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope text-accent mr-3 w-5"></i>
+                        <a href="mailto:info@alliancepacker.in" class="hover:text-white">info@alliancepacker.in</a>
+                    </li>
                 </ul>
             </div>
         </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+            &copy; 2026 Alliance Relocation Packers And Movers. All Rights Reserved.
+        </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- JavaScript for Mobile Menu & Animations -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            
+            // --- Number Counting Animation ---
             const counters = document.querySelectorAll('.counter');
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const counter = entry.target;
                         const target = parseInt(counter.getAttribute('data-target'));
+                        const suffix = counter.getAttribute('data-suffix') || '';
                         const duration = 2000;
                         let startTimestamp = null;
                         const step = (timestamp) => {
                             if (!startTimestamp) startTimestamp = timestamp;
                             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                            counter.innerText = Math.floor(progress * target);
+                            counter.innerText = Math.floor(progress * target) + suffix;
                             if (progress < 1) window.requestAnimationFrame(step);
-                            else counter.innerText = target;
+                            else counter.innerText = target + suffix;
                         };
                         window.requestAnimationFrame(step);
                         observer.unobserve(counter);
@@ -303,6 +501,7 @@
             }, { threshold: 0.5 });
             counters.forEach(counter => observer.observe(counter));
 
+            // --- Mobile Menu Toggle Logic ---
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const iconBars = document.getElementById('menu-icon-bars');
@@ -312,6 +511,7 @@
             function toggleMobileMenu() {
                 iconBars.classList.toggle('hidden');
                 iconClose.classList.toggle('hidden');
+                
                 if (mobileMenu.classList.contains('opacity-0')) {
                     mobileMenu.classList.remove('opacity-0', 'invisible', '-translate-y-2', 'pointer-events-none');
                     mobileMenu.classList.add('opacity-100', 'visible', 'translate-y-0', 'pointer-events-auto');
@@ -322,7 +522,12 @@
             }
 
             mobileBtn.addEventListener('click', toggleMobileMenu);
-            mobileLinks.forEach(link => link.addEventListener('click', () => { if (!mobileMenu.classList.contains('opacity-0')) toggleMobileMenu(); }));
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('opacity-0')) toggleMobileMenu();
+                });
+            });
         });
     </script>
 </body>
