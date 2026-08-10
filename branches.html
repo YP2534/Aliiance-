@@ -87,7 +87,6 @@
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center font-medium">
                 <a href="index.html" class="hover:text-brand transition">Home</a>
-                <!-- UPDATED TO point to about.html -->
                 <a href="about.html" class="hover:text-brand transition">About Us</a>
                 
                 <div class="relative group py-4">
@@ -122,14 +121,10 @@
         <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 transition-all duration-300 ease-in-out opacity-0 invisible -translate-y-2 pointer-events-none z-40">
             <div class="px-4 py-6 space-y-3 flex flex-col">
                 <a href="index.html" class="mobile-link block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-home w-6 text-brand"></i> Home</a>
-                <!-- UPDATED TO point to about.html -->
                 <a href="about.html" class="mobile-link block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-info-circle w-6 text-brand"></i> About Us</a>
                 <a href="services.html" class="block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-box-open w-6 text-brand"></i> Our Services</a>
-                
                 <a href="branches.html" class="mobile-link block px-4 py-3 text-base font-semibold text-brand bg-blue-50 rounded-xl transition"><i class="fas fa-map-marked-alt w-6 text-brand"></i> Branches</a>
-                
                 <a href="index.html#why-us" class="mobile-link block px-4 py-3 text-base font-semibold text-gray-800 hover:text-brand hover:bg-blue-50 rounded-xl transition"><i class="fas fa-star w-6 text-brand"></i> Why Choose Us</a>
-                
                 <div class="border-t border-gray-100 my-4"></div>
                 <a href="#contact-form" class="block px-4 py-4 text-center text-base font-bold bg-whatsapp text-white rounded-xl shadow-md hover:bg-green-600 transition"><i class="fab fa-whatsapp text-xl mr-2"></i> Get Free Quote</a>
             </div>
@@ -143,20 +138,32 @@
             <span class="text-accent font-bold tracking-wider uppercase text-sm mb-2 block">Our Network</span>
             <h1 class="text-3xl md:text-5xl font-bold text-white mb-6">PAN India Branches & Routes</h1>
             <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                We operate across a vast network. Select your preferred moving route below to instantly request a custom quotation.
+                We operate across a vast network. Find your preferred moving route below to instantly request a custom quotation.
             </p>
         </div>
     </section>
 
-    <!-- Routes Grid Section -->
-    <section class="py-16 bg-gray-50">
+    <!-- Routes Grid Section with Search -->
+    <section class="py-16 bg-gray-50 min-h-[500px]">
         <div class="max-w-7xl mx-auto px-4">
             
+            <!-- SEARCH BAR -->
+            <div class="max-w-3xl mx-auto mb-12 relative">
+                <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                    <i class="fas fa-search text-gray-400 text-lg"></i>
+                </div>
+                <input type="text" id="route-search" class="w-full pl-14 pr-4 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand shadow-sm outline-none text-gray-700 transition text-lg" placeholder="Search your destination (e.g. Pune, Delhi, Mumbai...)">
+            </div>
+
+            <!-- Empty State for No Results (Hidden by default) -->
+            <div id="no-results" class="hidden col-span-full py-10 text-center text-gray-500 text-lg">
+                <i class="fas fa-search-minus text-4xl mb-4 block opacity-40"></i>
+                <p>No routes found matching your search. Try another city.</p>
+            </div>
+            
             <!-- Grid for 138 Routes -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div id="routes-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 
-                <!-- Dynamic Links block generated from data -->
-                <!-- Every link points to #contact-form with an interaction hover effect -->
                 <a href="#contact-form" class="flex items-center p-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-brand hover:text-brand transition-all text-[13px] text-gray-700 font-medium group"><i class="fas fa-truck text-accent mr-3 group-hover:text-brand"></i> Packers & Movers Aurangabad To Siliguri</a>
                 <a href="#contact-form" class="flex items-center p-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-brand hover:text-brand transition-all text-[13px] text-gray-700 font-medium group"><i class="fas fa-truck text-accent mr-3 group-hover:text-brand"></i> Packers & Movers Aurangabad To Pune</a>
                 <a href="#contact-form" class="flex items-center p-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-brand hover:text-brand transition-all text-[13px] text-gray-700 font-medium group"><i class="fas fa-truck text-accent mr-3 group-hover:text-brand"></i> Packers & Movers Aurangabad To Bhopal</a>
@@ -396,7 +403,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu & Routing Interaction -->
+    <!-- JavaScript for Mobile Menu, Routing Interaction & Search -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Mobile Menu Logic
@@ -432,13 +439,11 @@
             
             routeLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
-                    // Extract the destination city from the text (e.g. "Packers & Movers Aurangabad To Pune" -> "Pune")
                     const text = e.target.innerText || e.target.textContent;
                     if(text.includes('To ')) {
                         const destination = text.split('To ')[1].trim();
                         if(movingToInput) {
                             movingToInput.value = destination;
-                            // Add a little highlight effect to show it updated
                             movingToInput.classList.add('ring-2', 'ring-accent', 'border-accent');
                             setTimeout(() => {
                                 movingToInput.classList.remove('ring-2', 'ring-accent', 'border-accent');
@@ -447,6 +452,39 @@
                     }
                 });
             });
+
+            // Live Search Functionality
+            const searchInput = document.getElementById('route-search');
+            const routesContainer = document.getElementById('routes-container');
+            const noResults = document.getElementById('no-results');
+
+            if (searchInput && routesContainer) {
+                // Get all route links inside the container
+                const allRoutes = routesContainer.querySelectorAll('a');
+
+                searchInput.addEventListener('input', function(e) {
+                    const searchTerm = e.target.value.toLowerCase().trim();
+                    let visibleCount = 0;
+
+                    allRoutes.forEach(route => {
+                        const routeText = route.textContent.toLowerCase();
+                        
+                        if (routeText.includes(searchTerm)) {
+                            route.style.display = 'flex';
+                            visibleCount++;
+                        } else {
+                            route.style.display = 'none';
+                        }
+                    });
+
+                    // Show or hide the "No results" message
+                    if (visibleCount === 0) {
+                        noResults.classList.remove('hidden');
+                    } else {
+                        noResults.classList.add('hidden');
+                    }
+                });
+            }
         });
     </script>
 </body>
