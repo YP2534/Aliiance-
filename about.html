@@ -231,75 +231,111 @@
         </div>
     </section>
 
-    <!-- Why Choose Us & Happy Clients Block -->
+    <!-- Why Choose Us Accordion Section -->
     <section id="why-us" class="py-20 bg-gray-50 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-4xl mx-auto px-4">
             
-            <div class="flex flex-col lg:flex-row gap-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-accent pb-2 inline-block">Why Work With Us?</h2>
+            </div>
+            
+            <!-- Interactive Accordion List -->
+            <div class="space-y-4">
                 
-                <!-- Left Column: Why Work With Us? -->
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-accent pb-2 inline-block">Why Work With Us?</h2>
-                    
-                    <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                        <div class="bg-white px-5 py-4 flex justify-between items-center cursor-pointer border-b border-gray-200">
-                            <h4 class="font-bold text-accent">11 Years of Experience</h4>
-                            <div class="bg-accent text-white w-6 h-6 flex items-center justify-center rounded"><i class="fas fa-chevron-up text-sm"></i></div>
-                        </div>
-                        <div class="bg-white px-5 py-6">
+                <!-- Accordion Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm accordion-item bg-white">
+                    <div class="accordion-header px-5 py-4 flex justify-between items-center cursor-pointer border-b border-transparent hover:bg-gray-50 transition-colors">
+                        <h4 class="font-bold text-gray-800 accordion-title">11 Years of Experience</h4>
+                        <div class="accordion-icon-bg bg-gray-700 text-white w-6 h-6 flex items-center justify-center rounded transition-colors"><i class="fas fa-chevron-down text-sm accordion-icon transition-transform"></i></div>
+                    </div>
+                    <!-- Hidden content by default using inline style 0px -->
+                    <div class="accordion-content px-5 overflow-hidden transition-all duration-300 ease-in-out bg-white" style="max-height: 0px;">
+                        <div class="py-6 border-t border-gray-100">
                             <p class="text-sm text-gray-700 leading-relaxed">We have a large network across the country and also around the globe. Making a name in the market took a long time in this industry. With lots of experiences, research, dedication and hard work we have made ourselves a leading one in Packers and Movers industry.</p>
                         </div>
                     </div>
-                    
-                    <div class="mb-4 border border-gray-200 rounded-lg bg-white px-5 py-4 flex justify-between items-center cursor-pointer hover:bg-gray-50 transition shadow-sm">
-                        <h4 class="font-bold text-gray-800">Timely Delivery</h4>
-                        <div class="bg-gray-700 text-white w-6 h-6 flex items-center justify-center rounded"><i class="fas fa-chevron-down text-sm"></i></div>
-                    </div>
-
-                    <div class="mb-4 border border-gray-200 rounded-lg bg-white px-5 py-4 flex justify-between items-center cursor-pointer hover:bg-gray-50 transition shadow-sm">
-                        <h4 class="font-bold text-gray-800">24 X 7 Services</h4>
-                        <div class="bg-gray-700 text-white w-6 h-6 flex items-center justify-center rounded"><i class="fas fa-chevron-down text-sm"></i></div>
-                    </div>
                 </div>
-
-                <!-- Right Column: Happy Clients Grid -->
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-accent pb-2 inline-block">Our Happy Clients</h2>
-                    
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex flex-col items-center justify-center shadow-sm">
-                            <span class="text-blue-700 font-bold text-lg uppercase tracking-wider leading-none flex items-center"><span class="text-blue-500 mr-1 text-xl">★</span> BLUE STAR</span>
-                            <span class="text-blue-700 text-[9px] font-medium tracking-widest mt-1">BREATHE EASY</span>
-                        </div>
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center shadow-sm">
-                            <span class="text-red-600 font-bold text-2xl italic tracking-tighter" style="font-family: serif;">Godrej</span>
-                        </div>
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center shadow-sm">
-                            <div class="bg-red-600 text-white px-3 py-1 font-bold text-xl tracking-widest border-2 border-yellow-400">USHA</div>
-                        </div>
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex flex-col items-center justify-center shadow-sm">
-                            <div class="bg-yellow-400 text-black px-2 py-0.5 font-black italic text-lg leading-none">UltraTech</div>
-                            <span class="text-[10px] font-bold mt-1 uppercase">Cement</span>
-                        </div>
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center shadow-sm">
-                            <span class="text-blue-700 font-black text-3xl tracking-tighter">HCL</span>
-                        </div>
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center shadow-sm">
-                            <span class="text-green-800 font-bold text-lg flex items-center leading-none"><span class="text-red-500 text-xl mr-1 font-normal">❖</span> J&K Bank</span>
-                        </div>
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center shadow-sm">
-                            <span class="text-red-600 font-bold text-2xl tracking-tighter lowercase flex items-center"><span class="text-red-600 font-black text-2xl mr-1">O</span>airtel</span>
-                        </div>
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex items-center justify-center shadow-sm">
-                            <div class="bg-teal-700 text-white px-2 py-1 font-bold text-sm tracking-wider flex items-center"><span class="bg-orange-500 w-2 h-2 rounded-full mr-1"></span> IDBI BANK</div>
-                        </div>
-                        <div class="client-logo-card bg-white p-4 h-24 rounded border border-gray-200 flex flex-col items-center justify-center shadow-sm">
-                            <span class="text-black font-black text-3xl leading-none">DLF</span>
-                            <span class="text-black font-semibold text-[8px] tracking-widest mt-1">BUILDING INDIA</span>
+                
+                <!-- Accordion Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm accordion-item bg-white">
+                    <div class="accordion-header px-5 py-4 flex justify-between items-center cursor-pointer border-b border-transparent hover:bg-gray-50 transition-colors">
+                        <h4 class="font-bold text-gray-800 accordion-title">Timely Delivery</h4>
+                        <div class="accordion-icon-bg bg-gray-700 text-white w-6 h-6 flex items-center justify-center rounded transition-colors"><i class="fas fa-chevron-down text-sm accordion-icon transition-transform"></i></div>
+                    </div>
+                    <!-- Hidden content by default using inline style 0px -->
+                    <div class="accordion-content px-5 overflow-hidden transition-all duration-300 ease-in-out bg-white" style="max-height: 0px;">
+                        <div class="py-6 border-t border-gray-100">
+                            <p class="text-sm text-gray-700 leading-relaxed">We offer domestic door-to-door delivery services for customers who want to simplify logistics management, reduce costs and minimize the risk of loss or product damage. Leveraging on our extensive global network, we provide consolidation of international freight, air, ocean and ground transportation, customs clearance and direct delivery at the desired destination within the country.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Accordion Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm accordion-item bg-white">
+                    <div class="accordion-header px-5 py-4 flex justify-between items-center cursor-pointer border-b border-transparent hover:bg-gray-50 transition-colors">
+                        <h4 class="font-bold text-gray-800 accordion-title">24 X 7 Services</h4>
+                        <div class="accordion-icon-bg bg-gray-700 text-white w-6 h-6 flex items-center justify-center rounded transition-colors"><i class="fas fa-chevron-down text-sm accordion-icon transition-transform"></i></div>
+                    </div>
+                    <!-- Hidden content by default using inline style 0px -->
+                    <div class="accordion-content px-5 overflow-hidden transition-all duration-300 ease-in-out bg-white" style="max-height: 0px;">
+                        <div class="py-6 border-t border-gray-100">
+                            <p class="text-sm text-gray-700 leading-relaxed">Alliance Relocation Packers And Movers offer our clients Door To Door Moving Services. Apart from this, we also offer our services for Packing & Moving, Home Relocation and Corporate Office Shifting. Safe & secure delivery of all kind of goods let you enjoy tension free relocation.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Happy Clients Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Happy Clients</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mt-4 rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Client 1: Blue Star -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex flex-col items-center justify-center">
+                    <span class="text-blue-700 font-bold text-lg md:text-xl uppercase tracking-wider leading-none flex items-center"><span class="text-blue-500 mr-1 text-2xl">★</span> BLUE STAR</span>
+                    <span class="text-blue-700 text-[10px] md:text-xs font-medium tracking-widest mt-1">BREATHE EASY</span>
+                </div>
+                <!-- Client 2: Godrej -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <span class="text-red-600 font-bold text-3xl md:text-4xl italic tracking-tighter" style="font-family: serif;">Godrej</span>
+                </div>
+                <!-- Client 3: USHA -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <div class="bg-red-600 text-white px-4 py-1.5 font-bold text-xl md:text-2xl tracking-widest border-2 border-yellow-400">USHA</div>
+                </div>
+                <!-- Client 4: UltraTech Cement -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex flex-col items-center justify-center">
+                    <div class="bg-yellow-400 text-black px-3 py-1 font-black italic text-xl md:text-2xl leading-none">UltraTech</div>
+                    <span class="text-xs md:text-sm font-bold mt-1 uppercase">Cement</span>
+                </div>
+                <!-- Client 5: HCL -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <span class="text-blue-700 font-black text-4xl md:text-5xl tracking-tighter">HCL</span>
+                </div>
+                <!-- Client 6: J&K Bank -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <span class="text-green-800 font-bold text-xl md:text-2xl flex items-center leading-none"><span class="text-red-500 text-2xl md:text-3xl mr-2 font-normal">❖</span> J&K Bank</span>
+                </div>
+                <!-- Client 7: Airtel -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <span class="text-red-600 font-bold text-3xl md:text-4xl tracking-tighter lowercase flex items-center"><span class="text-red-600 font-black text-3xl md:text-4xl mr-1">O</span>airtel</span>
+                </div>
+                <!-- Client 8: IDBI Bank -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex items-center justify-center">
+                    <div class="bg-teal-700 text-white px-3 py-1.5 font-bold text-base md:text-lg tracking-wider flex items-center"><span class="bg-orange-500 w-2.5 h-2.5 rounded-full mr-2"></span> IDBI BANK</div>
+                </div>
+                <!-- Client 9: DLF -->
+                <div class="client-logo-card bg-white p-4 h-28 rounded-xl border border-gray-200 flex flex-col items-center justify-center">
+                    <span class="text-black font-black text-4xl md:text-5xl leading-none">DLF</span>
+                    <span class="text-black font-semibold text-[9px] md:text-xs tracking-widest mt-1">BUILDING INDIA</span>
+                </div>
             </div>
         </div>
     </section>
@@ -355,7 +391,54 @@
     <!-- Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Number Counting Animation
+            
+            // --- Interactive Accordion Logic ---
+            const accordions = document.querySelectorAll('.accordion-header');
+            accordions.forEach((header) => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.accordion-icon');
+                    const title = this.querySelector('.accordion-title');
+                    const iconBg = this.querySelector('.accordion-icon-bg');
+                    
+                    // Close all other accordions first
+                    accordions.forEach(otherHeader => {
+                        if (otherHeader !== header) {
+                            const otherContent = otherHeader.nextElementSibling;
+                            otherContent.style.maxHeight = '0px';
+                            otherHeader.classList.remove('border-gray-200');
+                            otherHeader.classList.add('border-transparent');
+                            otherHeader.querySelector('.accordion-icon').classList.replace('fa-chevron-up', 'fa-chevron-down');
+                            otherHeader.querySelector('.accordion-title').classList.replace('text-accent', 'text-gray-800');
+                            otherHeader.querySelector('.accordion-icon-bg').classList.replace('bg-accent', 'bg-gray-700');
+                        }
+                    });
+
+                    // Toggle the clicked one
+                    if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        this.classList.remove('border-transparent');
+                        this.classList.add('border-gray-200');
+                        icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                        title.classList.replace('text-gray-800', 'text-accent');
+                        iconBg.classList.replace('bg-gray-700', 'bg-accent');
+                    } else {
+                        content.style.maxHeight = '0px';
+                        this.classList.remove('border-gray-200');
+                        this.classList.add('border-transparent');
+                        icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                        title.classList.replace('text-accent', 'text-gray-800');
+                        iconBg.classList.replace('bg-accent', 'bg-gray-700');
+                    }
+                });
+            });
+
+            // Automatically open the first accordion item on page load
+            if(accordions.length > 0) {
+                setTimeout(() => accordions[0].click(), 100); 
+            }
+
+            // --- Number Counting Animation ---
             const counters = document.querySelectorAll('.counter');
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
@@ -378,7 +461,7 @@
             }, { threshold: 0.5 });
             counters.forEach(counter => observer.observe(counter));
 
-            // Mobile Menu Logic
+            // --- Mobile Menu Toggle Logic ---
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const iconBars = document.getElementById('menu-icon-bars');
